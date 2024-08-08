@@ -1,6 +1,0 @@
-server:
-  port: 8081
-spring:
-  datasource:
-    user: 곽준석
-    password: password

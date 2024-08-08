@@ -1,4 +1,4 @@
-package com.example.springbootpractice;
+package com.example.ch01;
 
 import org.springframework.boot.context.event.ApplicationStartingEvent;
 import org.springframework.context.ApplicationListener;
