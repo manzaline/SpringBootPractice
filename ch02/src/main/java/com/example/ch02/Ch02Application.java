@@ -36,6 +36,9 @@ public class Ch02Application {
     ConfigurableApplicationContext applicationContext = 
         SpringApplication.run(Ch02Application.class, args);
 
+        System.out.println("한글이름 이시카와 미오가 나와라~!");
+        log.info("이건어떤대 진구지나오~!");
+
     AppService appService = 
         applicationContext.getBean(AppService.class);
     log.info(appService.getAppProperties().toString());
