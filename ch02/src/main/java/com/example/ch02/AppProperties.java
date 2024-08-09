@@ -4,8 +4,9 @@ import java.util.List;
  
 import org.springframework.boot.context.properties.ConfigurationProperties;
 // import org.springframework.boot.context.properties.ConstructorBinding;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
-// @ConstructorBinding
+// @ConstructorBinding // 스프링 3.0 이상부터 @ConstructorBinding 이 Deprecated
 @ConfigurationProperties("my.app.kjs")
 public class AppProperties {
 
@@ -32,7 +33,7 @@ public class AppProperties {
         return security;
     }
  
-    public AppProperties(String name, String ip, int port, Security security) {
+    public AppProperties(String name, String ip, @DefaultValue("8080")int port, Security security) {
         this.name = name;
         this.ip = ip;
         this.port = port;

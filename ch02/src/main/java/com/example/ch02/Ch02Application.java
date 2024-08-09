@@ -4,11 +4,13 @@ import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableConfigurationProperties(AppProperties.class)
@@ -33,15 +35,25 @@ public class Ch02Application {
     //     applicationContext.getBean(DBConfiguration.class);
     // log.info(dbConfiguration.toString());
 
-    ConfigurableApplicationContext applicationContext = 
-        SpringApplication.run(Ch02Application.class, args);
+    // ConfigurableApplicationContext applicationContext = 
+    //     SpringApplication.run(Ch02Application.class, args);        
+    // AppService appService = 
+    //     applicationContext.getBean(AppService.class);
+    // log.info(appService.getAppProperties().toString());
 
-        System.out.println("한글이름 이시카와 미오가 나와라~!");
-        log.info("이건어떤대 진구지나오~!");
+    SpringApplication.run(Ch02Application.class, args);
 
-    AppService appService = 
-        applicationContext.getBean(AppService.class);
-    log.info(appService.getAppProperties().toString());
 	}
 
+    // @Override
+    // public void run(String[] args) {
+    //     log.info("CommandLineRunner 의 run매서드 실행~!");
+    // }
+
+    @Bean
+    public CommandLineRunner commandLineRunner() {
+        return args -> {
+            log.info("CommandLineRunner 의 run매서드 실행~!");
+        };
+    }
 }
