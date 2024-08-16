@@ -4,3 +4,7 @@ spring:
   datasource:
     user: 곽준석
     password: password
+
+#logging:
+#  pattern:
+#    console: %clr(%d{dd-MM-yyyy HH:mm:ss.SSS}){yellow}%clr(${PID:- }){green} %magenta([%thread]) %highlight([%-5level])%clr(%-40.40logger{39}){cyan} %msg%n
