@@ -38,5 +38,7 @@ public class JPAUserSpringBootApplicationTests {
     Pageable nextPageable = pageable.next();
     assertThat(pagingRepository.findAll(nextPageable)).hasSize(4);
     assertThat(nextPageable.getPageNumber()).isEqualTo(1);
+
+    System.out.println("테스트문장");
   }
 }
