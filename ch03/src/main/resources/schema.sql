@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS mydb;
-USE mydb;
+CREATE DATABASE IF NOT EXISTS practice_db;
+USE practice_db;
 
 CREATE TABLE IF NOT EXISTS user_tb (
   id int auto_increment primary key,

@@ -39,12 +39,11 @@ public class Ch02Application implements CommandLineRunner {
     // springApplication.setDefaultProperties(properties);
     // springApplication.run(args);
 
-    // ConfigurableApplicationContext applicationContext = 
-    //     SpringApplication.run(Ch02Application.class, args);
-
-    // DBConfiguration dbConfiguration = 
-    //     applicationContext.getBean(DBConfiguration.class);
-    // log.info(dbConfiguration.toString());
+     ConfigurableApplicationContext applicationContext =
+         SpringApplication.run(Ch02Application.class, args);
+     DBConfiguration dbConfiguration =
+         applicationContext.getBean(DBConfiguration.class);
+     log.info(dbConfiguration.toString());
 
     // ConfigurableApplicationContext applicationContext = 
     //     SpringApplication.run(Ch02Application.class, args);        
@@ -52,7 +51,7 @@ public class Ch02Application implements CommandLineRunner {
     //     applicationContext.getBean(AppService.class);
     // log.info(appService.getAppProperties().toString());
 
-    SpringApplication.run(Ch02Application.class, args);
+//    SpringApplication.run(Ch02Application.class, args);
 
   }
 
